@@ -1,0 +1,139 @@
+:root {
+  --altura-navbar: 4.4rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+section h2, section li {
+  margin-bottom: 12px;
+  color: #10172a;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--altura-navbar);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  /* background: #333; */
+  background: #10172a;
+  /* line-height: 3rem; */
+  font-size: 1.1rem;
+}
+
+#logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  /* color: rgb(0, 186, 190); */
+  color: #00bcbc;
+  /* color: white; */
+  /* font-weight: bold; */
+  height: 70%;
+  max-height: 70%;
+}
+
+#logo img {
+  height: 100%;
+  max-height: 100%;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 32px;
+}
+
+main {
+  /* border: 3px solid red; */
+  margin-top: var(--altura-navbar);
+  height: calc(100vh - var(--altura-navbar));
+  /* display: flex; */
+  /* flex-direction: column; */
+}
+
+section {
+  scroll-margin-top: var(--altura-navbar);
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+#section1 {
+  /* background: lightcoral; */
+  /* background: lightseagreen; */
+  background: #00bcbc;
+}
+
+.content {
+  /* border: 3px solid red; */
+  display: flex;
+  /* max-width: 900px; */
+  width: 90%;
+  align-items: center;
+  gap: 40px;
+}
+
+.content img, .content video {
+  width: 60%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.content .text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#section2 {
+  background: lightblue;
+}
+
+/* Estilos para los detalles colapsables */
+details {
+  width: 100%;
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  color: #10172a;
+}
+
+summary {
+  font-weight: bold;
+  cursor: pointer;
+  padding: 8px;
+  background: #f0f0f0;
+  border-radius: 6px;
+}
+
+details p {
+  padding: 8px;
+  margin-top: 5px;
+  font-size: 1.1rem;
+}
+
+#section3 {
+  /* background: lightgreen; */
+  background: #00bcbc;
+}
