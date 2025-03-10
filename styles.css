@@ -44,6 +44,7 @@ header {
   /* font-weight: bold; */
   height: 70%;
   max-height: 70%;
+  user-select: none;
 }
 
 #logo img {
@@ -111,7 +112,7 @@ section {
 /* Estilos para los detalles colapsables */
 details {
   width: 100%;
-  background: white;
+  background: #f0f0f0;
   padding: 10px;
   border-radius: 8px;
   margin-bottom: 10px;
@@ -137,3 +138,78 @@ details p {
   /* background: lightgreen; */
   background: #00bcbc;
 }
+
+#clientes {
+  flex-direction: column;
+  height: fit-content;
+}
+
+.slider {
+  width: 100%;
+  max-width: 1200px;
+  height: 100px;
+  position: relative; /* al comentar se pierde transparencia */
+  margin: 30px 0;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.slider::before,
+.slider::after{
+  position:absolute;
+  background-image:linear-gradient(to right,rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+  content:'';
+  width:25%;
+  height:100%;
+  z-index:2
+  ;pointer-events:none;
+}
+
+.slider::before{
+  top:0;
+  left:0;
+}
+
+.slider::after{
+  top:0;
+  right:0;
+  transform:rotateZ(180deg);
+}
+
+.slider img{
+  max-width: 100px;
+  max-height: 60px;
+}
+
+.slide-track1 {
+  width: calc(150px * 46);
+  display: flex;
+  animation: scroll1 24s linear infinite;
+  justify-content: space-between;
+}
+
+@keyframes scroll1 {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(calc(-153px * 15));
+  }
+}
+
+.slide {
+  width: 150px;
+  height: 60px;
+  margin: 0 10px;
+  display: grid;
+  place-items: center;
+  transition:0.5s;
+  /* cursor:pointer; */
+  /* opacity: 0.5; */
+  user-select: none;
+}
+
+/* .slide:hover{
+  opacity: 1;
+} */
