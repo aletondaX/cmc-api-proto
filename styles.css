@@ -131,7 +131,7 @@ section {
   width: 60%;
   height: auto;
   border-radius: 10px;
-  opacity: 0;
+  /* opacity: 0; */
   transform: translateX(-50px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
@@ -201,6 +201,33 @@ details[open] {
 #section3 {
   /* background: lightgreen; */
   background: #00bcbc;
+}
+
+#section4 {
+  /* background: lightgreen; */
+  background: lightblue;
+}
+
+.image-container {
+  position: relative;
+  width: 50%;
+  height: calc(96vh - var(--altura-navbar));
+  max-height: 600px; /* para q no quede gigante en monitores grandes */
+}
+
+.image-container img {
+  /* width: 100%; */
+  height: 100%;
+  position: absolute;
+  right: -10%;
+  object-fit: contain;
+  opacity: 0;
+  /* border-radius: 20px; */
+  transition: opacity 0.9s ease-in-out;
+}
+
+.image-container img.active {
+  opacity: 1;
 }
 
 #clientes {

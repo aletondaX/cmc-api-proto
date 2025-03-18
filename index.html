@@ -21,6 +21,7 @@
       <a href="#section1">Sección1</a>
       <a href="#section2">Sección2</a>
       <a href="#section3">Sección3</a>
+      <a href="#section4">ChatBot</a>
     </nav>
   </header>
   <main>
@@ -90,8 +91,23 @@
       </div>
     </section>
 
-    <section id="clientes">
+    <section id="section4">
+      <div class="content" style="gap: 20px;">
+        <div class="image-container">
+          <img src="chatbot1.png" alt="Chatbot 1">
+          <img src="chatbot2.jpg" alt="Chatbot 2">
+          <img src="chatbot3.png" alt="Chatbot 3">
+        </div>
 
+        <div class="text">
+          <h2 style="margin-bottom: 16px;">CHATBOT <span style="font-weight:300">INTELIGENTE</span></h2>
+          <p style="margin-bottom: 16px;">Nuestro chatbot en Telegram es tu fuente instantánea de información. Conectate a cualquier base de datos y obtené datos sobre stock, cuentas corrientes, precios y más. Simplifica tus consultas y toma decisiones informadas al instante con nuestro chatbot.</p>
+          <p>¡Descubrí el poder de la información al alcance de tu mano!</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="clientes">
       <div>
         <h3>Algunos de nuestros <strong>Clientes</strong> y <strong>Partners</strong>:</h3>
       </div>
@@ -161,17 +177,35 @@
   // });
 
   // Animación de imágenes y video
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-      }
-    });
-  });
+  // const observer = new IntersectionObserver((entries) => {
+  //   entries.forEach((entry) => {
+  //     if (entry.isIntersecting) {
+  //       entry.target.classList.add("visible");
+  //     }
+  //   });
+  // });
 
-  document.querySelectorAll(".content").forEach((section) => {
-    observer.observe(section);
-  });
+  // document.querySelectorAll(".content").forEach((section) => {
+  //   observer.observe(section);
+  // });
+
+  document.addEventListener("DOMContentLoaded", function () {
+  let images = document.querySelectorAll(".image-container img");
+  let index = 0;
+
+  function rotateImages() {
+    images.forEach((img, i) => {
+      img.classList.remove("active");
+    });
+
+    images[index].classList.add("active");
+
+    index = (index + 1) % images.length;
+  }
+
+  images[0].classList.add("active"); // Inicializa con la primera imagen visible
+  setInterval(rotateImages, 3500); // Cambia de imagen cada 3 segundos
+});
 
 </script>
 
