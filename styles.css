@@ -208,11 +208,17 @@ details[open] {
   background: lightblue;
 }
 
+#section4 .content .text p {
+  font-size: 1.1rem;
+  text-align: center;
+}
+
 .image-container {
   position: relative;
   width: 50%;
   height: calc(96vh - var(--altura-navbar));
   max-height: 600px; /* para q no quede gigante en monitores grandes */
+  display: flex;
 }
 
 .image-container img {
@@ -222,8 +228,9 @@ details[open] {
   right: -10%;
   object-fit: contain;
   opacity: 0;
-  /* border-radius: 20px; */
+  border-radius: 0px;
   transition: opacity 0.9s ease-in-out;
+  /* clip-path: inset(4px 4px 4px 4px); */
 }
 
 .image-container img.active {
